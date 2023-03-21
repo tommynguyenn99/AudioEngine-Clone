@@ -1,0 +1,94 @@
+@use "colour" as *; 
+
+li {
+	list-style: none;
+}
+header {
+	background-color: $blackColor;
+}
+h1 {
+	// font-family: $font-family; 
+	font-weight: lighter;
+}
+a {
+	color: $white;
+	text-decoration: none;
+}
+.nav-logo {
+	font-size: 2rem;
+	min-width: 17rem;
+}
+.navbar {
+	min-height: 6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+}
+.nav-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 3rem;
+	font-size: 1.2rem;
+}
+.nav-item {
+	transition: 0.7s ease;
+	a {
+		&:hover {
+			// color: $secondary-blue;
+			transition: 0.2s ease-in-out;
+		}
+	}
+}
+.nav-right-logos { 
+    color: $white;
+}
+.hamburger {
+	display: none;
+	cursor: pointer;
+}
+.bar {
+	display: block;
+	width: 3.5rem;
+	height: 0.4rem;
+	margin: 0.8rem auto;
+	transition: all 0.3s ease-in-out;
+	// background-color: $secondary-color;
+}
+@media (max-width: 945px) {
+	.hamburger {
+		display: block;
+	}
+	.hamburger.active {
+		.bar {
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(1) {
+				transform: translateY(1rem) rotate(45deg);
+			}
+			&:nth-child(3) {
+				transform: translateY(-1.5rem) rotate(-45deg);
+			}
+		}
+	}
+	.nav-menu {
+		position: fixed;
+		left: -100%;
+		top: 5rem;
+		gap: 2rem;
+		flex-direction: column;
+		// background-color: $main-color;
+		width: 100%;
+		text-align: center;
+		transition: 0.3s ease-in-out;
+	}
+	.nav-item {
+		margin: 1rem 0rem;
+		font-size: 1.5rem;
+	}
+	.nav-menu.active {
+		left: 0;
+	}
+}
