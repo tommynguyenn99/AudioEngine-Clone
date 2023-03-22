@@ -29,7 +29,7 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 3rem;
+	gap: 2rem;
 	font-size: 1.2rem;
 }
 .nav-item {
@@ -54,9 +54,9 @@ a {
 	height: 0.4rem;
 	margin: 0.8rem auto;
 	transition: all 0.3s ease-in-out;
-	// background-color: $secondary-color;
+	background-color: $white;
 }
-@media (max-width: 945px) {
+@media (max-width: 950px) {
 	.hamburger {
 		display: block;
 	}
@@ -75,20 +75,26 @@ a {
 	}
 	.nav-menu {
 		position: fixed;
-		left: -100%;
-		top: 5rem;
-		gap: 2rem;
+		top: -100%; 
+        left: 0;
 		flex-direction: column;
-		// background-color: $main-color;
+		background-color: $blackColor;
+        height: 31.25rem;
 		width: 100%;
-		text-align: center;
 		transition: 0.3s ease-in-out;
+        // z-index: 2;
 	}
 	.nav-item {
 		margin: 1rem 0rem;
 		font-size: 1.5rem;
 	}
 	.nav-menu.active {
-		left: 0;
+        // position: relative;
+        top: 6rem;
+        // transform: translateY(31.25rem);
+        .nav-links { 
+            text-align: left;
+        }
 	}
+
 }
