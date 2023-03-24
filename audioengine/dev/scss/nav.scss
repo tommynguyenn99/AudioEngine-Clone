@@ -1,4 +1,5 @@
 @use "colour" as *; 
+@use 'typography' as *; 
 
 li {
 	list-style: none;
@@ -6,10 +7,7 @@ li {
 header {
 	background-color: $blackColor;
 }
-h1 {
-	// font-family: $font-family; 
-	font-weight: lighter;
-}
+
 a {
 	color: $white;
 	text-decoration: none;
@@ -19,31 +17,37 @@ a {
 	min-width: 17rem;
 }
 .navbar {
-	min-height: 6rem;
+	min-height: 4rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 2rem;
+	font-family: $font;
+}
+
+// Nav Logos 
+
+.nav-right-logos { 
+	// margin: 1.2rem;
+	a { 
+		// padding: 0 0.5rem 0 0.5rem;
+	}
 }
 .nav-menu {
 	display: flex;
-	// padding-left: 2rem;
 	justify-content: space-between;
 	// gap: 2rem;
 	font-size: 1.2rem;
 }
 .nav-item {
 	transition: 0.7s ease;
-	a {
-		&:hover {
-			// color: $secondary-blue;
-			transition: 0.2s ease-in-out;
-		}
+	padding: 1.2rem;
+	&:hover {
+		transition: 0.2s ease-in-out;
+		background-color:  $hover-color;
 	}
 }
-.nav-right-logos { 
-    color: $white;
-}
+
 .hamburger {
 	display: none;
 	cursor: pointer;
@@ -75,33 +79,47 @@ a {
 	}
 	.nav-menu {
 		position: absolute;
-		top: -100%; 
+		top: -50%; 
         left: 0;
 		flex-direction: column;
 		background-color: $blackColor;
-        // height: 31.25rem;
 		width: 100%;
 		transition: 0.3s ease-in-out;
-        z-index: 1;
+		z-index: 99;
 	}
 	.nav-item {
 		padding: 1rem 0rem;
+		margin-left: 1rem;
 		font-size: 1.5rem;
 	}
 	.nav-menu.active {
 		padding: 1rem 0 1rem 0;
-        top: 6rem;
+        top: 4rem;
 		.nav-item {
 		&:hover { 
 			transition: 0.2s ease-in-out;
 			background-color:  $hover-color;
-			
 		}
 	}
-        // transform: translateY(31.25rem);
         .nav-links { 
             text-align: left;
         }
-	}
 
+	.nav-right-logos { 
+		margin-left: 0.5rem;
+		a { 
+			padding: 0 0.3rem 0 0.3rem;
+		}
+	}
+	}
+}
+
+@media (min-width: 64rem) { 
+
+.nav-right-logos { 
+	margin: 1.2rem;
+	a { 
+		padding: 1rem 0.3rem; 
+	}
+}
 }

@@ -1,4 +1,5 @@
 @use "colour" as *;
+@use "typography" as *; 
 
 hr {
     background-color: $blackColor;
@@ -11,6 +12,7 @@ hr {
 
 footer { 
     // margin-top: 9.375rem; 
+    font-family: $font;
     width: 100%;
     display: flex;
     padding: 2rem;
