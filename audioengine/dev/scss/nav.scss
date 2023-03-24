@@ -1,4 +1,5 @@
 @use "colour" as *; 
+@use 'typography' as *; 
 
 li {
 	list-style: none;
@@ -6,10 +7,7 @@ li {
 header {
 	background-color: $blackColor;
 }
-h1 {
-	// font-family: $font-family; 
-	font-weight: lighter;
-}
+
 a {
 	color: $white;
 	text-decoration: none;
@@ -19,44 +17,50 @@ a {
 	min-width: 17rem;
 }
 .navbar {
-	min-height: 6rem;
+	min-height: 4rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 2rem;
+	font-family: $font;
+}
+
+// Nav Logos 
+
+.nav-right-logos { 
+	// margin: 1.2rem;
+	a { 
+		// padding: 0 0.5rem 0 0.5rem;
+	}
 }
 .nav-menu {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	gap: 3rem;
+	// gap: 2rem;
 	font-size: 1.2rem;
 }
 .nav-item {
 	transition: 0.7s ease;
-	a {
-		&:hover {
-			// color: $secondary-blue;
-			transition: 0.2s ease-in-out;
-		}
+	padding: 1.2rem;
+	&:hover {
+		transition: 0.2s ease-in-out;
+		background-color:  $hover-color;
 	}
 }
-.nav-right-logos { 
-    color: $white;
-}
+
 .hamburger {
 	display: none;
 	cursor: pointer;
 }
 .bar {
 	display: block;
-	width: 3.5rem;
-	height: 0.4rem;
-	margin: 0.8rem auto;
+	width: 3rem;
+	height: 0.3rem;
+	margin: 0.6rem auto;
 	transition: all 0.3s ease-in-out;
-	// background-color: $secondary-color;
+	background-color: $white;
 }
-@media (max-width: 945px) {
+@media (max-width: 64rem) {
 	.hamburger {
 		display: block;
 	}
@@ -66,29 +70,56 @@ a {
 				opacity: 0;
 			}
 			&:nth-child(1) {
-				transform: translateY(1rem) rotate(45deg);
+				transform: translateY(0.9rem) rotate(45deg);
 			}
 			&:nth-child(3) {
-				transform: translateY(-1.5rem) rotate(-45deg);
+				transform: translateY(-0.9rem) rotate(-45deg);
 			}
 		}
 	}
 	.nav-menu {
-		position: fixed;
-		left: -100%;
-		top: 5rem;
-		gap: 2rem;
+		position: absolute;
+		top: -50%; 
+        left: 0;
 		flex-direction: column;
-		// background-color: $main-color;
+		background-color: $blackColor;
 		width: 100%;
-		text-align: center;
 		transition: 0.3s ease-in-out;
+		z-index: 99;
 	}
 	.nav-item {
-		margin: 1rem 0rem;
+		padding: 1rem 0rem;
+		margin-left: 1rem;
 		font-size: 1.5rem;
 	}
 	.nav-menu.active {
-		left: 0;
+		padding: 1rem 0 1rem 0;
+        top: 4rem;
+		.nav-item {
+		&:hover { 
+			transition: 0.2s ease-in-out;
+			background-color:  $hover-color;
+		}
 	}
+        .nav-links { 
+            text-align: left;
+        }
+
+	.nav-right-logos { 
+		margin-left: 0.5rem;
+		a { 
+			padding: 0 0.3rem 0 0.3rem;
+		}
+	}
+	}
+}
+
+@media (min-width: 64rem) { 
+
+.nav-right-logos { 
+	margin: 1.2rem;
+	a { 
+		padding: 1rem 0.3rem; 
+	}
+}
 }
