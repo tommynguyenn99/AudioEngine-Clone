@@ -1,0 +1,60 @@
+@use "colour" as *;
+.video {
+  position: relative;
+}
+
+.video .btn {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.video .btn .play-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.video .video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  display: none;
+}
+
+.video .video-popup .video-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.video .video-popup .video-container video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.video .video-popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=video.css.map */
