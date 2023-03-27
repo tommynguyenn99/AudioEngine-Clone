@@ -1,6 +1,7 @@
 // Write your JavaScript here...
 
 //
+// Hamburger Menu
 const hamburger = document.querySelector (".hamburger"); 
 const navMenu = document.querySelector(".nav-menu"); 
 
@@ -54,3 +55,31 @@ $(document).ready(function(){
     })
 
 })
+// Play Button 
+
+// let btn = document.querySelector(".btn"); 
+// let videoClip = document.querySelector("video-clip");
+// btn.onclick = function() {
+//     btn.classList.add("active");
+//     videoClip.classList.add("active");
+// }
+
+
+const playBtn = document.querySelector('.play-btn');
+const videoPopup = document.querySelector('.video-popup');
+const closeBtn = document.querySelector('.close-btn');
+const video = document.querySelector('video');
+
+playBtn.addEventListener('click', () => {
+  videoPopup.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  videoPopup.style.display = 'none';
+});
+
+videoPopup.addEventListener('click', (event) => {
+  if (event.target === videoPopup) {
+    videoPopup.style.display = 'none';
+  }
+});

@@ -1,0 +1,29 @@
+@use "typography" as *; 
+@use "colour" as *;
+
+
+
+// Back to top 
+.back-to-top { 
+    color: $back-top;
+}
+
+
+// Bottom Icons 
+@media (min-width: 20rem) {
+    .left-side-icons, .right-side-icon { 
+       margin-left: 2rem;
+    }
+}
+
+@media (min-width: 37.5rem) {
+    .left-side-icons { 
+    float: left;
+}
+.right-side-icon { 
+    float: right;
+    // NEST A tag in white 
+    
+}
+}
+
