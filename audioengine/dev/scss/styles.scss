@@ -6,6 +6,7 @@
 @use "typography" as *; 
 @use "mixins" as *;
 @use "video" as *;
+@use "main" as *;
 
 * {
     margin: 0;
@@ -184,5 +185,4 @@
       padding: 1rem 0.3rem;
     }
   }
-@use "main" as *; 
-@use "video" as *;
+
