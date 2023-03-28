@@ -103,3 +103,4 @@ dev/scripts/script.min.js.map
 *.swp
 *.vi
 *~
+.DS_Store
