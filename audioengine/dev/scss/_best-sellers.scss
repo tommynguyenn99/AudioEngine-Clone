@@ -1,0 +1,11 @@
+@use "colour" as *;
+
+.best-sellers {
+    img {
+        width: 50vw;
+    }
+    a {
+        max-width: 50vw;
+        background-color: $accentOrange;
+    }
+}
