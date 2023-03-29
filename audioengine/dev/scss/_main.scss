@@ -16,14 +16,19 @@
     }
 }
 
+.news-ref {
+    margin: 0 auto;
+    width: 100%;
+}
+
 .news-wrap {
-    max-width: fit-content;
+    width: 85%;
     margin: 0 auto;
     
 
     img {
-        margin: 2 auto;
-        padding: 1rem 2rem;
+        margin: 0 auto;
+        padding: 1rem 3rem;
     }
 
     slick-list {
@@ -32,11 +37,24 @@
     }
 }
 
-// @media (min-width: 51.6em ) {
-//     .news-wrap {
-//         max-width: fit-content ;
-//     }
-// }
+
+
+.slick-next {
+    background: url(../images/next-arrow.png);
+    color: coral;
+    z-index: 100;
+    width: 50px;
+    height: 81px;
+    
+}
+
+.slick-prev {
+    background: url(../images/prev-arrow.jpg);
+    color: coral;
+    z-index: 100;
+    width: 50px;
+    height: 81px;
+}
 
 
 

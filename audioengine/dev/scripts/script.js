@@ -18,8 +18,9 @@ document.querySelectorAll(".nav-links").forEach(n => n.addEventListener("click",
 $(document).ready(function(){
 
     $('.news-wrap').slick({
-        dots: true,
-        infinite: false,
+        dots: false,
+        arrows: true,
+        infinite: true,
         slidesToShow: 5,
         slidesToScroll: 5,
         responsive: [
