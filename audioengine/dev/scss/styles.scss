@@ -7,6 +7,8 @@
 @use "mixins" as *;
 @use "video" as *;
 @use "main" as *;
+@use "slick";
+@use "slick-theme";
 
 * {
     margin: 0;
