@@ -8,6 +8,8 @@
 @use "video" as *;
 @use "main" as *;
 @use "best-sellers" as *;
+@use "slick";
+@use "slick-theme";
 
 * {
     margin: 0;
