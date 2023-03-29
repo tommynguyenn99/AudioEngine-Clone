@@ -1,27 +1,42 @@
 @use "variables" as *;
 @use "mixins" as *;
 @use "colour" as *;
-@use "typography" as *;
+@use "typography";
+@use "slick";
+@use "slick-theme";
 
-.news-wrap {
-    display: flex;
-    flex-direction: column;
-
-    img {
-        margin: 10rem;
-    }
+@media (max-width: 31.25em) {
+    .news-wrap {
+        display: flex;
+        flex-direction: column;
     
+        img {
+            margin: 1rem;
+        }
+    }
 }
 
 .news-wrap {
-    display: flex;
-    flex-direction: column;
+    max-width: fit-content;
+    margin: 0 auto;
+    
 
     img {
-        margin: 10rem;
+        margin: 2 auto;
+        padding: 1rem 2rem;
     }
-    
+
+    slick-list {
+        @extend .news-wrap;
+
+    }
 }
+
+// @media (min-width: 51.6em ) {
+//     .news-wrap {
+//         max-width: fit-content ;
+//     }
+// }
 
 
 

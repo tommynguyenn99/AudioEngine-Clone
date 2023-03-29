@@ -5,9 +5,9 @@
 @use "nav" as *; 
 @use "typography" as *; 
 @use "mixins" as *;
-@use "video" as *;
-@use "main" as *;
-@use "best-sellers" as *;
+@use "video";
+@use "main";
+@use "best-sellers";
 @use "slick";
 @use "slick-theme";
 
