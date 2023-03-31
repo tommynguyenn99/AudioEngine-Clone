@@ -1,0 +1,59 @@
+@use "slick";
+@use "slick-theme";
+@use "colour" as *;
+
+
+//parent slick container
+.hero-container {
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.hero-slider {
+
+    //fade transition
+    transition-property: opacity;
+    transition-duration: 2s;
+
+    //arrow repositioning
+    button.slick-arrow.slick-next {
+        position: absolute;
+        right: 0;
+    }
+
+    button.slick-arrow.slick-prev {
+        position: absolute;
+        left: 0;
+    }
+
+    //slider dots
+    ul.slick-dots{
+
+        bottom: 15px;
+    
+        li {
+            background-color: $accentOrange;
+            padding: 1rem;
+            border-radius: 50%;
+        }
+    
+        .slick-active {
+            @extend li;
+            background-color: $accentOrange;
+            opacity: .5;
+    
+            button:before {
+                color: transparent;
+            }
+        }
+    
+        button:before {
+            color: transparent;
+        }
+    
+    
+    }
+
+
+}
