@@ -26,6 +26,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	font-size: 1.2rem;
+	white-space: nowrap;
 }
 .nav-item {
 	transition: 0.7s ease;
@@ -57,7 +58,7 @@ header {
 // Mobile Nav Components 
 
 .nav-menu-mobile { 
-	display: none;
+	display: block;
 	height: 0px;
 }
 @media (max-width: 64rem) {
@@ -86,7 +87,7 @@ header {
 		background-color: $blackColor;
 		width: 100%;
 		transition: height 0.7s ease-in-out;
-		display: none;
+		display: block;
 	}
 	.nav-item-mobile {
 		padding: 1rem 0rem;
@@ -103,8 +104,7 @@ header {
 		padding: 1rem 0 1rem 0;
         top: 4rem;
 		display: block;
-		// transition: height 0.7s ease-in-out;
-		transition: all 0.5s ease-in-out;
+		transition: height 0.7s ease-in-out;
 		.nav-item-mobile {
 		&:hover { 
 			transition: height 0.2s ease-in-out;
