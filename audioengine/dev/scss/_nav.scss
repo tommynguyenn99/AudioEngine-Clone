@@ -1,6 +1,7 @@
 @use "colour" as *; 
 @use 'typography' as *; 
 
+// Nav Desktop 
 li {
 	list-style: none;
 }
@@ -12,12 +13,12 @@ header {
 	font-size: 2rem;
 	min-width: 17rem;
 }
-.navbar {
+.navbar-main {
 	min-height: 4rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 2rem;
+	padding: 0 1rem;
 	font-family: $font;
 }
 
@@ -51,6 +52,14 @@ header {
 	transition: all 0.3s ease-in-out;
 	background-color: $white;
 }
+
+
+// Mobile Nav Components 
+
+.nav-menu-mobile { 
+	display: none;
+	top: 0;
+}
 @media (max-width: 64rem) {
 	.hamburger {
 		display: block;
@@ -68,17 +77,15 @@ header {
 			}
 		}
 	}
-	.nav-menu {
-		position: absolute;
-		top: -50%; 
-        left: 0;
+	.mobile-nav { 
+	.nav-menu-mobile {
 		flex-direction: column;
 		background-color: $blackColor;
 		width: 100%;
-		transition: 0.3s ease-in-out;
-		z-index: 99;
+		transition: height 0.7s ease-in-out;
+		display: none;
 	}
-	.nav-item {
+	.nav-item-mobile {
 		padding: 1rem 0rem;
 		margin-left: 1rem;
 		font-size: 1.5rem;
@@ -87,21 +94,22 @@ header {
 			text-decoration: none;
 		}
 	}
-	.nav-menu.active {
-		// height: 300px;
+	.nav-menu-mobile.active {
+		height: fit-content;
 		padding: 1rem 0 1rem 0;
         top: 4rem;
+		display: block;
 		.nav-item {
 		&:hover { 
-			transition: 0.2s ease-in-out;
+			transition: height 0.2s ease-in-out;
 			background-color:  $hover-color;
 		}
 	}
-        .nav-links { 
+        .nav-links-mobile { 
             text-align: left;
         }
 
-	.nav-right-logos { 
+	.nav-right-logos-mobile { 
 		margin-left: 0.5rem;
 		a { 
 			padding: 0 0.3rem 0 0.3rem;
@@ -110,6 +118,7 @@ header {
 	}
 }
 
+}
 @media (min-width: 64rem) { 
 
 .nav-right-logos { 
