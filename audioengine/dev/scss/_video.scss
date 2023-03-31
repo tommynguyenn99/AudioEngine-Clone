@@ -1,110 +1,117 @@
 @use "colour" as *; 
 
-
-
-// .btn { 
-//     position: relative; 
-//     cursor: pointer;
-//     .play-btn { 
-//         position: relative;
-//         width: 4.62rem;
-//         height: 4.62rem;
-//         background-color: $playBtn;
-//         border-radius: 50%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         box-shadow: 0 1rem 4rem black;
-//         transition: 0.5s;
-//         left: 50%;
-//         right: 50%;
-//         top: 50%;
-//         bottom: 50%;
-//         &:active {
-//             box-shadow: 0 0 0 150vh rgba(0, 0, 0, 0.4);
-//         }
-//         &::before {
-//             content: "";
-//             position: absolute;
-//             border: 2rem solid white;
-//             border-top: 1.2rem solid transparent;
-//             border-bottom: 1.2rem solid transparent;
-//             border-right: 0rem solid transparent;
-//             transform: translateX(0.31rem);
-//         }
-//     }
-
-// }
-
-// .video-clip { 
-//     position: fixed;
-//     top: 50%;
-//     left: 50%;
-//     width: 100%;
-//     height: 100%;
-//     transform: translate(-50%, -50%) scale(1); 
-//     margin: 0 auto;
-//     z-index: 99;
-//     video { 
-//         max-width: 80%;
-//         height: auto;
-//         display: block;
-//         margin: 0 auto;
-//         &:active { 
-//             transform: translate(-50%, -50%) scale(1); 
-//         }
-//     }
-// }
-
-.video { 
-    position: relative;
-    .btn { 
-        display: inline-block;
+    // Video Container 
+    .video { 
+        display: grid;
+        place-items: center;
         position: relative;
-        z-index: 1;
-        cursor: pointer;
-        .play-btn { 
-            width: 60px;
-            height: 60px;
-            background-color: $playBtn;
-            border-radius: 50%; 
-            // aidjasid
+        .btn {
+            width: 100%;
+            margin: 0 auto;
+            position: absolute;
         }
     }
-    .video-popup { 
-        position: fixed;
-        top: 0;
-        left: 0;
+
+    // // Video and play button
+    .video { 
+        position: relative;
         width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 2;
-        display: none;
-        .video-container { 
+        aspect-ratio: 16 / 9;
+        .btn { 
             position: absolute;
+            z-index: 1;
+            width: fit-content;
+            cursor: pointer;  
             top: 50%;
+            height: 3rem;
             left: 50%;
             transform: translate(-50%, -50%);
-            max-width: 80%;
-            max-height: 80%;
-        video { 
-            display: block;
-            width: 100%;
-            height: 100%;
-  }
-        }
-        .close-btn { 
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 30px;
-            height: 30px;
-            background-color: #000;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            font-weight: bold;
         }
     }
-}
+
+            @media (min-width: 20rem) { 
+            .video { 
+                .video-image { 
+                    display: none;
+                }
+                .play-btn { 
+                    border-style: solid;
+                    border-width: 1.31rem;
+                    box-sizing: border-box;
+                    border-width: 1.31rem 0 1.31rem 2.62rem;
+                    border-color: transparent transparent transparent $playBtn;
+                }
+                .close-btn {
+                    display: none;
+                }
+                .video-container {
+                    .video-image { 
+                        display: none;
+                    }
+                video { 
+                    width: 100%;
+                    height: auto;
+                    }
+                }
+            }
+        }
+
+    @media (min-width: 48rem){ 
+        .video { 
+            .play-btn { 
+                border-style: solid;
+                border-width: 2.31rem;
+                box-sizing: border-box;
+                border-width: 2.31rem 0 2.31rem 3.62rem;
+                border-color: transparent transparent transparent $playBtn;
+            }
+        }
+    }
+
+    @media (min-width: 63.75rem) {
+        .video { 
+            .video-image { 
+                display: block;
+                width: 100%;
+                height: fit-content;
+            }
+        .video-popup { 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $playShadow;
+            z-index: 2;
+            display: none;
+            .video-container { 
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 100%;
+                max-height: 100%;
+            video { 
+                width: 100%;
+                height: 100%;
+                padding: 1rem;
+                background-color: $white;
+                z-index: 99;
+    }
+            }
+            .close-btn { 
+                position: absolute;
+                top: -0.8rem;
+                right: -1rem;
+                width: 4rem;
+                height: 2.5rem;
+                background-color: $blackColor;
+                color: $white;
+                border: none;
+                cursor: pointer;
+                font-size: 1rem;
+                display: block;
+            }
+        }
+        }
+    }
