@@ -1,144 +1,145 @@
-@use "colour" as *; 
-@use 'typography' as *; 
+	@use "colour" as *; 
+	@use 'typography' as *; 
 
-// Nav Desktop 
-li {
-	list-style: none;
-}
-header {
-	background-color: $blackColor; 
-}
-
-.nav-logo {
-	font-size: 2rem;
-	min-width: 17rem;
-}
-.navbar-main {
-	min-height: 4rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 1rem;
-	font-family: $font;
-}
-
-.nav-menu {
-	display: flex;
-	justify-content: space-between;
-	font-size: 1.2rem;
-	white-space: nowrap;
-}
-.nav-item {
-	transition: 0.7s ease;
-	padding: 1.2rem;
-	a {
-		color: $white;
-		text-decoration: none;
+	// Nav Desktop 
+	li {
+		list-style: none;
 	}
-	&:hover {
-		transition: 0.2s ease-in-out;
-		background-color:  $hover-color;
+	header {
+		background-color: $blackColor; 
 	}
-}
 
-.hamburger {
-	display: none;
-	cursor: pointer;
-}
-.bar {
-	display: block;
-	width: 3rem;
-	height: 0.3rem;
-	margin: 0.6rem auto;
-	transition: all 0.3s ease-in-out;
-	background-color: $white;
-}
-
-
-// Mobile Nav Components 
-
-.nav-menu-mobile { 
-	display: block;
-	height: 0;
-}
-
-.nav-right-logos-mobile { 
-	margin-left: 1rem;
-}
-
-@media (max-width: 64rem) {
-	.hamburger {
-		display: block;
+	.nav-logo {
+		font-size: 2rem;
+		min-width: 17rem;
 	}
-	.hamburger.active {
-		.bar {
-			&:nth-child(2) {
-				opacity: 0;
-			}
-			&:nth-child(1) {
-				transform: translateY(0.9rem) rotate(45deg);
-			}
-			&:nth-child(3) {
-				transform: translateY(-0.9rem) rotate(-45deg);
-			}
-		}
-	}
-	.mobile-nav { 
+	.navbar-main {
+		min-height: 4rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1rem;
 		font-family: $font;
-			top: 0;
-	.nav-menu-mobile {
-		flex-direction: column;
-		background-color: $blackColor;
-		width: 100%;
-		transition: height 0.7s ease-in-out;
-		display: block;
 	}
-	.nav-item-mobile {
-		padding: 1rem 0rem;
-		margin-left: 1rem;
-		font-size: 1.5rem;
-		transition: height 0.7s ease-in-out;
-		a{ 
+
+	.nav-menu {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.2rem;
+		white-space: nowrap;
+	}
+	.nav-item {
+		transition: 0.7s ease;
+		padding: 1.2rem;
+		a {
 			color: $white;
 			text-decoration: none;
 		}
-	}
-	.nav-menu-mobile.active {
-		// height: fit-content;
-		display: block;
-		height: 22rem;
-		transition: height 0.7s ease-in-out;
-		.nav-item-mobile {
-		&:hover { 
-			transition: height 0.2s ease-in-out;
+		&:hover {
+			transition: 0.2s ease-in-out;
 			background-color:  $hover-color;
 		}
 	}
-        .nav-links-mobile { 
-            text-align: left;
-        }
+
+	// Hambuger 
+	.hamburger {
+		display: none;
+		cursor: pointer;
+	}
+	.bar {
+		display: block;
+		width: 3rem;
+		height: 0.3rem;
+		margin: 0.6rem auto;
+		transition: all 0.3s ease-in-out;
+		background-color: $white;
+	}
+
+
+	// Mobile Nav Components 
+
+	.nav-menu-mobile { 
+		display: block;
+		height: 0;
+	}
 
 	.nav-right-logos-mobile { 
 		margin-left: 1rem;
-			img  {
-				&:hover { 
-					background-color: $playShadow;
-					transition:0.5s ease-in-out;
+	}
+
+	@media (max-width: 64rem) {
+		.hamburger {
+			display: block;
+		}
+		.hamburger.active {
+			.bar {
+				&:nth-child(2) {
+					opacity: 0;
+				}
+				&:nth-child(1) {
+					transform: translateY(0.9rem) rotate(45deg);
+				}
+				&:nth-child(3) {
+					transform: translateY(-0.9rem) rotate(-45deg);
 				}
 			}
-	}
-	}
-}
+		}
+		.mobile-nav { 
+			font-family: $font;
+				top: 0;
+		.nav-menu-mobile {
+			flex-direction: column;
+			background-color: $blackColor;
+			width: 100%;
+			transition: height 0.7s ease-in-out;
+			display: block;
+		}
+		.nav-item-mobile {
+			padding: 1rem 0rem;
+			margin-left: 1rem;
+			font-size: 1.5rem;
+			transition: height 0.7s ease-in-out;
+			a{ 
+				color: $white;
+				text-decoration: none;
+			}
+		}
+		.nav-menu-mobile.active {
+			display: block;
+			height: 22rem;
+			transition: height 0.7s ease-in-out;
+			.nav-item-mobile {
+			&:hover { 
+				transition: height 0.2s ease-in-out;
+				background-color:  $hover-color;
+			}
+		}
+			.nav-links-mobile { 
+				text-align: left;
+			}
 
-}
-
-@media (min-width: 64rem) { 
-
-.nav-right-logos { 
-	margin-left: 1rem;
-		&:hover { 
-			background-color: $playShadow;
-			transition:0.5s ease-in-out;
+		.nav-right-logos-mobile { 
+			margin-left: 1rem;
+				img  {
+					&:hover { 
+						background-color: $playShadow;
+						transition:0.5s ease-in-out;
+					}
+				}
+		}
 		}
 	}
-}
+
+	}
+
+	// Media query for logos in navbar 
+	@media (min-width: 64rem) { 
+
+	.nav-right-logos { 
+		margin-left: 1rem;
+			&:hover { 
+				background-color: $playShadow;
+				transition:0.5s ease-in-out;
+			}
+		}
+	}

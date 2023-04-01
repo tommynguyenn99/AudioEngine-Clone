@@ -1,175 +1,175 @@
-@use "variables" as *;
-@use "mixins" as *;
-@use "colour" as *;
-@use "typography";
-@use "slick";
-@use "slick-theme";
+    @use "variables" as *;
+    @use "mixins" as *;
+    @use "colour" as *;
+    @use "typography";
+    @use "slick";
+    @use "slick-theme";
 
-@media (max-width: 31.25em) {
-    .news-wrap {
-        display: flex;
-        flex-direction: column;
-    
-        img {
-            margin: 1rem;
+    // News Wrap 
+    @media (max-width: 31.25em) {
+        .news-wrap {
+            display: flex;
+            flex-direction: column;
+        
+            img {
+                margin: 1rem;
+            }
         }
     }
-}
 
-.news-ref {
-    margin: 0 auto;
-    width: 100%;
-}
-
-.news-wrap {
-    width: 85%;
-    margin: 0 auto;
-    
-
-    img {
+    .news-ref {
         margin: 0 auto;
-        padding: 1rem 3rem;
+        width: 100%;
     }
 
-    slick-list {
-        @extend .news-wrap;
-
-    }
-}
-
-
-
-.slick-next {
-    background: url(../images/next-arrow.png);
-    color: coral;
-    z-index: 100;
-    width: 50px;
-    height: 81px;
-    
-}
-
-.slick-prev {
-    background: url(../images/prev-arrow.png);
-    color: coral;
-    z-index: 100;
-    width: 50px;
-    height: 81px;
-}
-
-.right-side-icon { 
-    position: relative;
-    width: auto;
-    span { 
-        width: 50%;
-        color: $blackColor;
-        &:hover { 
-            color: $playBtn;
+    .news-wrap {
+        width: 85%;
+        margin: 0 auto;
+        img {
+            margin: 0 auto;
+            padding: 1rem 3rem;
+        }
+        slick-list {
+            @extend .news-wrap;
         }
     }
-}
 
 
-// Back to top 
-.back-to-top { 
-    color: $back-top;
-}
-
-
-// Bottom Icons Media Queries 
-@media (min-width: 20rem) {
-    .left-side-icons { 
-       margin-left: 2rem;
+// Slick 
+    .slick-next {
+        background: url(../images/next-arrow.png);
+        color: coral;
+        z-index: 100;
+        width: 50px;
+        height: 81px;
     }
+
+    .slick-prev {
+        background: url(../images/prev-arrow.png);
+        color: coral;
+        z-index: 100;
+        width: 50px;
+        height: 81px;
+    }
+
     .right-side-icon { 
         position: relative;
-        width: 25%;
-        img { 
-            white-space: normal;
-            margin-left: 2rem;
-        }
+        width: auto;
         span { 
-            position: absolute;
-            white-space: nowrap;
-            padding: 1rem;
             width: 50%;
-            left: 5rem;
-            height: auto;
-            top: 50%;
-            transform: translateY(-50%);
-            text-align: center;
+            color: $blackColor;
+            &:hover { 
+                color: $playBtn;
+            }
         }
     }
-}
 
-@media (min-width: 35.62rem) {
-    .left-side-icons { 
-    float: left;
-}
-.right-side-icon {
-    position: relative;
-    float: right;
-    width: 40%;
-    span { 
-        position: absolute;
-        padding: 1rem;
-        white-space: nowrap;
-    } 
-}
-}
 
-@media (min-width: 48rem) { 
+    // Back to top 
+    .back-to-top { 
+        color: $back-top;
+    }
+
+
+    // Bottom Icons Media Queries 
+
+    .sm-icons {
+        padding: 5rem;
+    }
+    @media (min-width: 20rem) {
+        .left-side-icons { 
+        margin-left: 2rem;
+        }
+        .right-side-icon { 
+            position: relative;
+            width: 25%;
+            img { 
+                white-space: normal;
+                margin-left: 2rem;
+            }
+            span { 
+                position: absolute;
+                white-space: nowrap;
+                padding: 1rem;
+                width: 50%;
+                left: 5rem;
+                height: auto;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+            }
+        }
+    }
+
+    @media (min-width: 35.62rem) {
+        .left-side-icons { 
+        float: left;
+    }
     .right-side-icon {
         position: relative;
         float: right;
-        width: 35%;
+        width: 40%;
         span { 
             position: absolute;
             padding: 1rem;
             white-space: nowrap;
         } 
     }
-}
+    }
+
+    @media (min-width: 48rem) { 
+        .right-side-icon {
+            position: relative;
+            float: right;
+            width: 35%;
+            span { 
+                position: absolute;
+                padding: 1rem;
+                white-space: nowrap;
+            } 
+        }
+    }
 
 
-@media (min-width: 63.75rem) { 
-    .right-side-icon {
-        position: relative;
-        float: right;
-        width: 30%;
-        span { 
-            position: absolute;
-            padding: 1rem;
-            white-space: nowrap;
+    @media (min-width: 63.75rem) { 
+        .right-side-icon {
+            position: relative;
+            float: right;
             width: 30%;
-        } 
+            span { 
+                position: absolute;
+                padding: 1rem;
+                white-space: nowrap;
+                width: 30%;
+            } 
+        }
     }
-}
 
-@media (min-width: 75rem) { 
-    .right-side-icon {
-        position: relative;
-        float: right;
-        width: 25%;
-        span { 
-            position: absolute;
-            padding: 1rem;
-            white-space: nowrap;
-            width: 30%;
-        } 
+    @media (min-width: 75rem) { 
+        .right-side-icon {
+            position: relative;
+            float: right;
+            width: 25%;
+            span { 
+                position: absolute;
+                padding: 1rem;
+                white-space: nowrap;
+                width: 30%;
+            } 
+        }
     }
-}
 
-@media (min-width: 87.5rem) { 
-    .right-side-icon {
-        position: relative;
-        float: right;
-        width: 20%;
-        span { 
-            position: absolute;
-            padding: 1rem;
-            white-space: nowrap;
-            width: 30%;
-        } 
+    @media (min-width: 87.5rem) { 
+        .right-side-icon {
+            position: relative;
+            float: right;
+            width: 20%;
+            span { 
+                position: absolute;
+                padding: 1rem;
+                white-space: nowrap;
+                width: 30%;
+            } 
+        }
     }
-}
 

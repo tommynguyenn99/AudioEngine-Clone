@@ -1,120 +1,121 @@
-@use "colour" as *; 
+    @use "colour" as *; 
 
-    // Video Container 
-    .video { 
-        display: grid;
-        place-items: center;
-        position: relative;
-        .btn {
+        // Video Container 
+        .video { 
+            display: grid;
+            place-items: center;
+            position: relative;
+            .btn {
+                width: 100%;
+                margin: 0 auto;
+                position: absolute;
+            }
+        }
+
+        // // Video and play button
+        .video { 
+            position: relative;
             width: 100%;
-            margin: 0 auto;
-            position: absolute;
+            aspect-ratio: 16 / 9;
+            .btn { 
+                position: absolute;
+                z-index: 1;
+                width: fit-content;
+                cursor: pointer;  
+                top: 50%;
+                height: 3rem;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
-    }
+        // Media queries for video and pop out video 
 
-    // // Video and play button
-    .video { 
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        .btn { 
-            position: absolute;
-            z-index: 1;
-            width: fit-content;
-            cursor: pointer;  
-            top: 50%;
-            height: 3rem;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-
-            @media (min-width: 20rem) { 
-            .video { 
-                margin-top: 2rem;
-                .video-image { 
-                    display: none;
-                }
-                .play-btn { 
-                    border-style: solid;
-                    border-width: 1.31rem;
-                    box-sizing: border-box;
-                    border-width: 1.31rem 0 1.31rem 2.62rem;
-                    border-color: transparent transparent transparent $playBtn;
-                }
-                .close-btn {
-                    display: none;
-                }
-                .video-container {
+                @media (min-width: 20rem) { 
+                .video { 
+                    margin-top: 2rem;
                     .video-image { 
                         display: none;
                     }
-                video { 
-                    width: 100%;
-                    height: auto;
+                    .play-btn { 
+                        border-style: solid;
+                        border-width: 1.31rem;
+                        box-sizing: border-box;
+                        border-width: 1.31rem 0 1.31rem 2.62rem;
+                        border-color: transparent transparent transparent $playBtn;
                     }
+                    .close-btn {
+                        display: none;
+                    }
+                    .video-container {
+                        .video-image { 
+                            display: none;
+                        }
+                    video { 
+                        width: 100%;
+                        height: auto;
+                        }
+                    }
+                }
+            }
+
+        @media (min-width: 48rem){ 
+            .video { 
+                .play-btn { 
+                    border-style: solid;
+                    border-width: 2.31rem;
+                    box-sizing: border-box;
+                    border-width: 2.31rem 0 2.31rem 3.62rem;
+                    border-color: transparent transparent transparent $playBtn;
                 }
             }
         }
 
-    @media (min-width: 48rem){ 
-        .video { 
-            .play-btn { 
-                border-style: solid;
-                border-width: 2.31rem;
-                box-sizing: border-box;
-                border-width: 2.31rem 0 2.31rem 3.62rem;
-                border-color: transparent transparent transparent $playBtn;
-            }
-        }
-    }
-
-    @media (min-width: 63.75rem) {
-        .video { 
-            .video-image { 
-                display: block;
+        @media (min-width: 63.75rem) {
+            .video { 
+                .video-image { 
+                    display: block;
+                    width: 100%;
+                    height: fit-content;
+                    margin-top: 2rem;
+                }
+            .video-popup { 
+                position: fixed;
+                top: 0;
+                left: 0;
                 width: 100%;
-                height: fit-content;
-                margin-top: 2rem;
+                height: 100%;
+                background: $popOutShadow;
+                z-index: 2;
+                display: none;
+                .video-container { 
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    max-width: 100%;
+                    max-height: 100%;
+                video { 
+                
+                    width: 100%;
+                    height: fit-content;
+                    padding: 1rem;
+                    background-color: $white;
+                    z-index: 99;
+        }
+                }
+                .close-btn { 
+                    position: absolute;
+                    top: -0.8rem;
+                    right: -1rem;
+                    width: 4rem;
+                    height: 2.5rem;
+                    background-color: $blackColor;
+                    color: $white;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    display: block;
+                }
             }
-        .video-popup { 
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: $popOutShadow;
-            z-index: 2;
-            display: none;
-            .video-container { 
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                max-width: 100%;
-                max-height: 100%;
-            video { 
-               
-                width: 100%;
-                height: fit-content;
-                padding: 1rem;
-                background-color: $white;
-                z-index: 99;
-    }
-            }
-            .close-btn { 
-                position: absolute;
-                top: -0.8rem;
-                right: -1rem;
-                width: 4rem;
-                height: 2.5rem;
-                background-color: $blackColor;
-                color: $white;
-                border: none;
-                cursor: pointer;
-                font-size: 1rem;
-                display: block;
             }
         }
-        }
-    }
