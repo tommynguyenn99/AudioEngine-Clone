@@ -56,6 +56,17 @@
     height: 81px;
 }
 
+.right-side-icon { 
+    position: relative;
+    width: auto;
+    span { 
+        width: 50%;
+        color: $blackColor;
+        &:hover { 
+            color: $playBtn;
+        }
+    }
+}
 
 
 // Back to top 
@@ -64,21 +75,101 @@
 }
 
 
-// Bottom Icons 
+// Bottom Icons Media Queries 
 @media (min-width: 20rem) {
-    .left-side-icons, .right-side-icon { 
+    .left-side-icons { 
        margin-left: 2rem;
+    }
+    .right-side-icon { 
+        position: relative;
+        width: 25%;
+        img { 
+            white-space: normal;
+            margin-left: 2rem;
+        }
+        span { 
+            position: absolute;
+            white-space: nowrap;
+            padding: 1rem;
+            width: 50%;
+            left: 5rem;
+            height: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
     }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 35.62rem) {
     .left-side-icons { 
     float: left;
 }
-.right-side-icon { 
+.right-side-icon {
+    position: relative;
     float: right;
-    // NEST A tag in white 
-    
+    width: 40%;
+    span { 
+        position: absolute;
+        padding: 1rem;
+        white-space: nowrap;
+    } 
 }
+}
+
+@media (min-width: 48rem) { 
+    .right-side-icon {
+        position: relative;
+        float: right;
+        width: 35%;
+        span { 
+            position: absolute;
+            padding: 1rem;
+            white-space: nowrap;
+        } 
+    }
+}
+
+
+@media (min-width: 63.75rem) { 
+    .right-side-icon {
+        position: relative;
+        float: right;
+        width: 30%;
+        span { 
+            position: absolute;
+            padding: 1rem;
+            white-space: nowrap;
+            width: 30%;
+        } 
+    }
+}
+
+@media (min-width: 75rem) { 
+    .right-side-icon {
+        position: relative;
+        float: right;
+        width: 25%;
+        span { 
+            position: absolute;
+            padding: 1rem;
+            white-space: nowrap;
+            width: 30%;
+        } 
+    }
+}
+
+@media (min-width: 87.5rem) { 
+    .right-side-icon {
+        position: relative;
+        float: right;
+        width: 20%;
+        span { 
+            position: absolute;
+            padding: 1rem;
+            white-space: nowrap;
+            width: 30%;
+        } 
+    }
 }
 
