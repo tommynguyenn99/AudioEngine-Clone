@@ -1,6 +1,6 @@
 @use "slick";
 @use "slick-theme";
-@use "colour" as *;
+@use "variables" as *;
 
 
 //parent slick container
@@ -20,7 +20,8 @@
     width: 100%;
 
     img {
-        width: fit-content;
+        width: 100%;
+        
     }
 
     //arrow repositioning
@@ -41,7 +42,8 @@
     
         li {
             background-color: $accentOrange;
-            padding: 1rem;
+            padding: .5rem;
+            margin: .5rem;
             border-radius: 50%;
         }
     

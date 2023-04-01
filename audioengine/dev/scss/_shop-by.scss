@@ -1,6 +1,6 @@
-@use "colour";
 @use "slick";
 @use "slick-theme";
+@use "variables" as *;
 
 //grid active for mobile layout
 @media (max-width: 27rem){
@@ -8,6 +8,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
+        
     
         div {
             position: relative;
