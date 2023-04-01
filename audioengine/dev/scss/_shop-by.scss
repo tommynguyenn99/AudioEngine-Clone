@@ -1,0 +1,80 @@
+@use "colour";
+@use "slick";
+@use "slick-theme";
+
+//grid active for mobile layout
+@media (max-width: 27rem){
+    .shop-by-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    
+        div {
+            position: relative;
+            margin: 1rem;
+            
+            img {
+                display: block;
+                max-width: 100%;
+                border-radius: 50%;
+                filter: brightness(50%);
+            }
+                
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                color: white;
+                text-align: center;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                line-height: 1.25rem;
+                font-size: 1.25rem;
+            }
+            
+        }
+    
+    }
+
+}
+
+@media (min-width:27.001rem) {
+    .shop-by-container {
+    
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+    
+        div {
+            position: relative;
+            margin: .5rem;
+            
+            img {
+                display: block;
+                max-width: 100%;
+                border-radius: 50%;
+                filter: brightness(50%);
+            }
+                
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                color: white;
+                text-align: center;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                line-height: 1.25rem;
+                font-size: 1.25rem;
+            }
+    
+        
+        }
+    }
+
+
+}    
