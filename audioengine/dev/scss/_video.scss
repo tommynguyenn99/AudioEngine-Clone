@@ -83,7 +83,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: $playShadow;
+            background: $popOutShadow;
             z-index: 2;
             display: none;
             .video-container { 

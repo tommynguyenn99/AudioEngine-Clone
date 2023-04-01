@@ -59,8 +59,13 @@ header {
 
 .nav-menu-mobile { 
 	display: block;
-	height: 0px;
+	height: 0;
 }
+
+.nav-right-logos-mobile { 
+	margin-left: 1rem;
+}
+
 @media (max-width: 64rem) {
 	.hamburger {
 		display: block;
@@ -81,7 +86,6 @@ header {
 	.mobile-nav { 
 		font-family: $font;
 			top: 0;
-			transition: height 0.7s ease-in-out;
 	.nav-menu-mobile {
 		flex-direction: column;
 		background-color: $blackColor;
@@ -100,10 +104,9 @@ header {
 		}
 	}
 	.nav-menu-mobile.active {
-		height: fit-content;
-		padding: 1rem 0 1rem 0;
-        top: 4rem;
+		// height: fit-content;
 		display: block;
+		height: 22rem;
 		transition: height 0.7s ease-in-out;
 		.nav-item-mobile {
 		&:hover { 
@@ -116,21 +119,26 @@ header {
         }
 
 	.nav-right-logos-mobile { 
-		margin-left: 0.5rem;
-		a { 
-			padding: 0 0.3rem 0 0.3rem;
-		}
+		margin-left: 1rem;
+			img  {
+				&:hover { 
+					background-color: $playShadow;
+					transition:0.5s ease-in-out;
+				}
+			}
 	}
 	}
 }
 
 }
+
 @media (min-width: 64rem) { 
 
 .nav-right-logos { 
-	margin: 1.2rem;
-	a { 
-		padding: 1rem 0.3rem; 
+	margin-left: 1rem;
+		&:hover { 
+			background-color: $playShadow;
+			transition:0.5s ease-in-out;
+		}
 	}
-}
 }
