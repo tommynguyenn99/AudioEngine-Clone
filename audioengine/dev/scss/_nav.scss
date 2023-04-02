@@ -78,7 +78,7 @@
 		margin-left: 1rem;
 	}
 
-	@media (max-width: 64rem) {
+	@media (max-width: 67.18rem) {
 		.hamburger {
 			display: block;
 		}
@@ -117,7 +117,7 @@
 		}
 		.nav-menu-mobile.active {
 			display: block;
-			height: 22rem;
+			height: 19rem;
 			transition: height 0.7s ease-in-out;
 			.nav-item-mobile {
 			&:hover { 
@@ -144,13 +144,13 @@
 	}
 
 	// Media query for logos in navbar 
-	@media (min-width: 64rem) { 
-
-	.nav-right-logos { 
-		margin-left: 1rem;
-			&:hover { 
-				background-color: $playShadow;
-				transition:0.5s ease-in-out;
+	@media (min-width: 67.18rem) { 
+		.nav-right-logos {
+			a {
+					&:hover {
+						background-color: $playShadow;
+						transition:0.5s ease-in-out;
+					}
 			}
 		}
 	}

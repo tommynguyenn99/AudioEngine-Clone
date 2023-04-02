@@ -33,6 +33,19 @@ p, li {
     margin: 0 auto;
 }
 
+// Media query for sitemap 
+
+@media (min-width: 20rem){ 
+  .sitemap {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 35.62rem ) {
+  .sitemap {
+    margin-top: 8rem;
+  }
+}
 
 //in the news
 @media (max-width: 31.25em) {
@@ -150,26 +163,37 @@ p, li {
     // Back to top 
     .back-to-top { 
         color: $back-top;
+        font-family: $font;
+       
     }
 
+    // Media query for top button 
+    @media (min-width: 20rem) {
+      .back-to-top { 
+        margin-left: 2rem;
+      }
+    }
 
     // Bottom Icons Media Queries 
 
     .sm-icons {
-        padding: 5rem;
+        white-space: nowrap;       
     }
     @media (min-width: 20rem) {
         .left-side-icons { 
-        margin-left: 2rem;
+        margin: 1rem 0 0 2rem;
+
         }
         .right-side-icon { 
             position: relative;
             width: 25%;
+            margin-top: 1rem;
             img { 
                 white-space: normal;
-                margin-left: 2rem;
+                margin-left:  2rem;
             }
             span { 
+              font-family: $font;
                 position: absolute;
                 white-space: nowrap;
                 padding: 1rem;
@@ -256,21 +280,6 @@ p, li {
     }
 
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  hr {
-    background-color: #000000;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-  }
   
   footer {
     font-family: "Source Sans Pro", sans-serif;
@@ -376,7 +385,7 @@ p, li {
     background-color: white;
   }
   
-  @media (max-width: 64rem) {
+  @media (max-width: 67.18rem) {
     .hamburger {
       display: block;
     }
@@ -427,7 +436,7 @@ p, li {
     }
   }
 
-  @media (min-width: 64rem) {
+  @media (min-width: 67.18rem) {
     .nav-right-logos {
       margin: 1.2rem;
     }
