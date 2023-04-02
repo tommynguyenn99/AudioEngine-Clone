@@ -97,7 +97,7 @@ p, li {
 
 .slick-next {
     background: url(../images/next-arrow.png);
-    color: coral;
+    color: $coral;
     z-index: 100;
     width: 50px;
     height: 81px;
@@ -106,7 +106,7 @@ p, li {
 
 .slick-prev {
     background: url(../images/prev-arrow.png);
-    color: coral;
+    color: $coral;
     z-index: 100;
     width: 50px;
     height: 81px;
@@ -130,7 +130,7 @@ p, li {
 // Slick 
     .slick-next {
         background: url(../images/next-arrow.png);
-        color: coral;
+        color: $coral;
         z-index: 100;
         width: 50px;
         height: 81px;
@@ -139,7 +139,7 @@ p, li {
 
     .slick-prev {
         background: url(../images/prev-arrow.png);
-        color: coral;
+        color: $coral;
         z-index: 100;
         width: 50px;
         height: 81px;
