@@ -1,12 +1,14 @@
 @use "slick";
 @use "slick-theme";
-@use "colour" as *;
+@use "variables" as *;
 
 
 //parent slick container
 .hero-container {
     margin: 0 auto;
     position: relative;
+    width: 100%;
+
 }
 
 
@@ -15,6 +17,12 @@
     //fade transition
     transition-property: opacity;
     transition-duration: 2s;
+    width: 100%;
+
+    img {
+        width: 100%;
+        
+    }
 
     //arrow repositioning
     button.slick-arrow.slick-next {
@@ -34,7 +42,8 @@
     
         li {
             background-color: $accentOrange;
-            padding: 1rem;
+            padding: .5rem;
+            margin: .5rem;
             border-radius: 50%;
         }
     

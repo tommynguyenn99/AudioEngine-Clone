@@ -1,5 +1,4 @@
-@use "colour" as *;
-@use "typography" as *; 
+@use "variables" as *;
 
 footer { 
     border-top: 1px solid $blackColor;

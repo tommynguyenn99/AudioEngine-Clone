@@ -14,45 +14,7 @@ document.querySelectorAll(".nav-links-mobile").forEach(n => n.addEventListener("
 
 
 
-// slick carousel elements for in-the-news div
-$(document).ready(function(){
 
-    $('.news-wrap').slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        responsive: [
-            {
-                breakpoint: 825,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                }
-            },
-            {
-                breakpoint: 700,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 650,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 500,
-                settings: "unslick",
-            }
-        ]
-    })
-
-})
 // Play button for pop out 
 const playBtn = document.querySelector('.play-btn');
 const videoPopup = document.querySelector('.video-popup');
