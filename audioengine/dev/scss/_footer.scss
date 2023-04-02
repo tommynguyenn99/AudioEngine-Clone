@@ -1,57 +1,58 @@
-@use "variables" as *;
+    @use "variables" as *;
+    @use "colours" as *; 
 
-footer { 
-    border-top: 1px solid $blackColor;
-    font-family: $font;
-    width: 100%;
-    display: flex;
-    padding: 2rem;
-    background-color: $footer-color;
-    div {
-        margin: 0 auto;
-        a{
+    footer { 
+        border-top: 1px solid $blackColor;
+        font-family: $font;
+        width: 100%;
+        display: flex;
+        padding: 2rem;
+        background-color: $footer-color;
+        div {
+            margin: 0 auto;
+            a{
+                display: block;
+                color: $footer-link-color;
+                text-decoration: none;
+                margin: 1rem 0 1rem 0;
+            } 
+        }
+    }
+
+    // Media Queries
+
+    @media (min-width: 20rem) { 
+        footer { 
             display: block;
-            color: $footer-link-color;
-            text-decoration: none;
-            margin: 1rem 0 1rem 0;
-        } 
+        }
     }
-}
 
-// Media Queries
-
-@media (min-width: 20rem) { 
-    footer { 
-        display: block;
+    @media (min-width: 22rem){ 
+        footer {
+            overflow: hidden;
+            .master-col { 
+            display: block;
+            .col-1, .col-3{
+                float: left;
+                width: 40%;
+                text-align: center;
+            } 
+            .col-2, .col-4 {
+                float: right ;
+                width: 40%;
+                text-align: center;
+            } 
+        }
     }
-}
-
-@media (min-width: 22rem){ 
-    footer {
-        overflow: hidden;
-        .master-col { 
-        display: block;
-        .col-1, .col-3{
-            float: left;
-            width: 40%;
-            text-align: center;
-        } 
-        .col-2, .col-4 {
-            float: right ;
-            width: 40%;
-            text-align: center;
-        } 
     }
-}
-}
 
-@media (min-width: 31.25rem) {
-    footer { 
-        .master-col { 
-            display: flex;
-            div {
-                width: 25%;
+    @media (min-width: 31.25rem) {
+        footer { 
+            .master-col { 
+                display: flex;
+                div {
+                    width: 25%;
+                }
             }
         }
     }
-}
