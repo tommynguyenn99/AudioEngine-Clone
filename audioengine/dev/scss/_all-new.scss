@@ -1,6 +1,86 @@
-@use 'variables';
+@use "variables" as *;
+@use "mixins" as *;
 
-.all-new-img {
-    width: 100%;
-    height: auto;
+.section-wrapper {
+    line-height: 0;
 }
+
+.all-new {
+    color: #fff;
+    position: relative;
+
+    .all-new-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.sticky-text-container {
+    background-color: #00000093;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+
+    @include media($sm){
+        width: auto;
+        height: 50%;
+        left: unset;
+        top: 25%;
+        right: 0;
+    }
+}
+
+// TEXT BOX MOVES TO THE RIGHT @ 502px
+
+.sticky-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    gap: 1rem;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    // font-size: 100%;
+
+    @include media($sm){
+        margin: 2rem;
+    }
+    
+    h2 {
+        padding: 0;
+        // margin-top: 2rem;
+        font-size: 2rem;
+        font-weight: 600;
+
+        @include media($sm){
+            margin: 0 0 .5rem 0;
+        }
+
+        @include media($lg){
+            font-size: 2.5rem
+        }
+    }
+
+    p {
+        font-family: $titleFont;
+        line-height: 1.5rem;
+        font-size: 1.25rem;
+
+        @include media($lg){
+            font-size: 1.5rem;
+        }
+    }
+    
+    a {
+        @include linkStyle;
+        background-color: #fff;
+        color: #666666;
+        width: 8em;
+    }
+}
+

@@ -1,7 +1,16 @@
-// @use "variables" as *;
+@use "variables" as *;
 
-// @mixin media($mediawidth: $md) {
-//     @media (min-width: $mediawidth) {
-//       @content;
-//     }
-//   }
+@mixin media($mediawidth: $md) {
+    @media (min-width: $mediawidth) {
+      @content;
+    }
+  }
+
+@mixin linkStyle {
+    font-family: $titleFont;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 1.25rem 1.4rem;
+    border-radius: .3rem;
+}
