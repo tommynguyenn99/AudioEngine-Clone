@@ -1,15 +1,21 @@
 @use "variables" as *; 
 
+
         // Video Container 
         .video { 
             display: grid;
             place-items: center;
             position: relative;
+            margin-bottom: 3rem;
             .btn {
                 width: 100%;
                 margin: 0 auto;
                 position: absolute;
             }
+        }
+
+        .video-border { 
+           border: 2px solid $videoBlueBorder; 
         }
 
         // // Video and play button
@@ -115,6 +121,9 @@
                     cursor: pointer;
                     font-size: 1rem;
                     display: block;
+                    &:hover { 
+                        background-color: $playBtn;
+                    }
                 }
             }
             }
