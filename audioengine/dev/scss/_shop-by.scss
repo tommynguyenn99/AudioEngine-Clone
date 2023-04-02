@@ -3,7 +3,7 @@
 @use "variables" as *;
 
 //grid active for mobile layout
-@media (max-width: 27rem){
+@media (max-width: 26.55rem){
     .shop-by-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -41,7 +41,7 @@
 
 }
 
-@media (min-width:27.001rem) {
+@media (min-width:26.56rem) {
     .shop-by-container {
     
         width: 90%;

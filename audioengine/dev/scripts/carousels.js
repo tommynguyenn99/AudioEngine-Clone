@@ -23,26 +23,27 @@ $(document).ready(function(){
     function updateSlick(event) {
         if (event.matches) { // We want Slick to run!
           $('.shop-by-container').slick ({
-              dots: false,
-              arrows: true,
-              infinite: true,
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              responsive: [
-                  {
-                      breakpoint: 800,
-                      settings: {
-                          slidesToShow: 4,
-                          slidesToScroll: 4,
-                      }
-                  },
-                  {
-                      breakpoint: 1200,
-                      settings: {
-                          slidesToShow: 5,
-                          slidesToScroll: 5,
-                      }
-                  }
+                breakpoint: 425,
+                dots: false,
+                arrows: true,
+                infinite: false,
+                slidesToShow: 5,
+                slidesToScroll: 2,
+                responsive: [
+                    {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 3,
+                    }
+                },
+                {
+                    breakpoint: 825,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                }
               ]
           })
         } else { // 'unslick'
@@ -50,7 +51,7 @@ $(document).ready(function(){
         }
       }
       
-      const mediaQuery = window.matchMedia("(min-width: 432px)")
+      const mediaQuery = window.matchMedia("(min-width: 425px)")
       updateSlick(mediaQuery) // Call listener function at run time
       mediaQuery.addListener(updateSlick) // Attach listener function on state changes
 
@@ -95,7 +96,6 @@ $(document).ready(function(){
             }
         ]
     })
-
 })
 
 
