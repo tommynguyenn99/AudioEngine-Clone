@@ -1,0 +1,28 @@
+@use "colour" as *;
+@use "typography" as *;
+
+.our-story {
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 100%;
+    }
+
+    h2, p {
+        position: absolute;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    h2 {
+        top: 20%;
+    }
+    
+    p{
+        top: 40%;
+    }
+}
