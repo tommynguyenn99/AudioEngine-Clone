@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 @use "variables" as *;
 @use "mixins" as *;
 @use "slick";
@@ -37,6 +41,7 @@ p, li {
             display: block;
         }
     }
+}
 
 .news-ref {
     margin: 1rem auto;
@@ -61,6 +66,7 @@ p, li {
         padding: 1rem 1rem;
     }
 
+<<<<<<< HEAD
     slick-list {
         @extend .news-wrap;
 
@@ -98,9 +104,21 @@ p, li {
         color: $blackColor;
         &:hover { 
             color: $playBtn;
+=======
+    .news-wrap {
+        width: 85%;
+        margin: 0 auto;
+        img {
+            margin: 0 auto;
+            padding: 1rem 3rem;
+        }
+        slick-list {
+            @extend .news-wrap;
+>>>>>>> origin/main
         }
     }
 }
+
 
 // Slick 
     .slick-next {
@@ -111,6 +129,7 @@ p, li {
         height: 81px;
     }
 
+
     .slick-prev {
         background: url(../images/prev-arrow.png);
         color: coral;
@@ -118,6 +137,7 @@ p, li {
         width: 50px;
         height: 81px;
     }
+
 
     .right-side-icon { 
         position: relative;
@@ -128,6 +148,7 @@ p, li {
             &:hover { 
                 color: $playBtn;
             }
+
         }
     }
 
@@ -411,6 +432,7 @@ p, li {
       padding: 0 0.3rem 0 0.3rem;
     }
   }
+
   @media (min-width: 64rem) {
     .nav-right-logos {
       margin: 1.2rem;
@@ -419,3 +441,8 @@ p, li {
       padding: 1rem 0.3rem;
     }
   }
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> origin/main
