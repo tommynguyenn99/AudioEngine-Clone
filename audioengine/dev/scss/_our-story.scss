@@ -1,4 +1,5 @@
-@use 'variables' as *;
+@use "mixins" as *;
+@use "variables" as *;
 
 .our-story {
     position: relative;
@@ -9,19 +10,68 @@
 
     img {
         width: 100%;
-    }
+        height: auto;
+    } 
+}
 
-    h2, p {
-        position: absolute;
-        width: 60%;
+.story-container {
+    background-color: rgba(0, 0, 0, 0.517);
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // DESKTOP VIEW
+    @include media(){
+        background: none;
         margin: 0 auto;
+        // top: 3px;
+    }
+    // REGULAR VIEW
+    h2 {
+        line-height: 1;
+        padding: 0;
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-bottom: .5rem;
+    
+    @media (min-width: 391px){
+        font-size: 3em;
     }
 
-    h2 {
-        top: 20%;
+    @include media(){
+        font-size: 3.5em;
+    }
     }
     
     p{
-        top: 40%;
+        font-family: $titleFont;
+        line-height: 1.75rem;
+        // padding: 1rem 3rem;
+        margin-bottom: 1.75rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        width: 80%;
+
+    @include media(){
+        // padding: 1rem 0 1.5rem;
+        font-weight: 600;
+        font-size: 1.75rem;
+        line-height: 1.5em;
+        width: 60%;
+    }
+    }
+
+    span {
+        font-style: italic;
+    }   
+    
+    a {
+        background-color: $accentOrange;
+        @include linkStyle; 
     }
 }
+
+
+// styling in MAIN is attributed to ALL headers & paragraphs
