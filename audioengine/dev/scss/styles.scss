@@ -2,10 +2,8 @@
 @use "reset" as *; 
 @use "variables" as *; 
 @use "footer" as *; 
-@use "nav" as *; 
-@use "mixins" as *;
+@use "mixins";
 @use "video";
-@use "main";
 @use "best-sellers";
 @use "all-new";
 @use "our-story";
@@ -13,3 +11,5 @@
 @use "slick-theme";
 @use "hero-slider";
 @use "shop-by";
+@use "main";
+@use "nav";

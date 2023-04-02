@@ -1,7 +1,17 @@
-@use "variables" as *;
-@use "mixins" as *;
+@use "reset" as *; 
+@use "variables" as *; 
+@use "footer" as *; 
+@use "nav"; 
+@use "mixins";
+@use "video";
+@use "best-sellers";
+@use "all-new";
+@use "our-story";
 @use "slick";
 @use "slick-theme";
+@use "hero-slider";
+@use "shop-by";
+
 
 
 //typography
