@@ -42,6 +42,7 @@
 	.nav-item {
 		transition: 0.7s ease;
 		padding: 1.2rem;
+		margin: 0;
 		a {
 			color: $white;
 			text-decoration: none;
@@ -66,6 +67,36 @@
 		background-color: $white;
 	}
 
+	// Media query for desktop
+	  @media (max-width: 67.18rem) {
+
+    .nav-menu {
+      position: absolute;
+      top: -50%;
+      left: 0;
+      flex-direction: column;
+      background-color: #000000;
+      width: 100%;
+      transition: 0.3s ease-in-out;
+      z-index: 99;
+    }
+  
+    .nav-item {
+      padding: 1rem 0rem;
+      margin-left: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .nav-menu.active .nav-links {
+      text-align: left;
+    }
+    .nav-menu.active .nav-right-logos {
+      margin-left: 0.5rem;
+    }
+    .nav-menu.active .nav-right-logos a {
+      padding: 0 0.3rem 0 0.3rem;
+    }
+  }
 
 	// Mobile Nav Components 
 
@@ -78,7 +109,7 @@
 		margin-left: 1rem;
 	}
 
-	@media (max-width: 64rem) {
+	@media (max-width: 67.18rem) {
 		.hamburger {
 			display: block;
 		}
@@ -109,7 +140,7 @@
 			padding: 1rem 0rem;
 			margin-left: 1rem;
 			font-size: 1.5rem;
-			transition: height 0.7s ease-in-out;
+			transition: height 0.5s ease-in-out;
 			a{ 
 				color: $white;
 				text-decoration: none;
@@ -117,11 +148,11 @@
 		}
 		.nav-menu-mobile.active {
 			display: block;
-			height: 22rem;
+			height: 19rem;
 			transition: height 0.7s ease-in-out;
 			.nav-item-mobile {
 			&:hover { 
-				transition: height 0.2s ease-in-out;
+				transition: 0.5s ease-in-out;
 				background-color:  $hover-color;
 			}
 		}
@@ -134,23 +165,33 @@
 				img  {
 					&:hover { 
 						background-color: $playShadow;
-						transition:0.5s ease-in-out;
+						transition:0.3s ease-in-out;
 					}
 				}
-		}
-		}
-	}
-
-	}
-
-	// Media query for logos in navbar 
-	@media (min-width: 64rem) { 
-
-	.nav-right-logos { 
-		margin-left: 1rem;
-			&:hover { 
-				background-color: $playShadow;
-				transition:0.5s ease-in-out;
 			}
 		}
 	}
+
+	}
+
+	// Media query for logos in navbar (Mobile)
+	@media (min-width: 67.18rem) { 
+		.nav-right-logos {
+			a {
+				&:hover {
+					background-color: $playShadow;
+					transition:0.5s ease-in-out;
+				}
+			}
+		}
+	}
+
+	// Media query for logos in navbar (Desktop) 
+	@media (min-width: 67.18rem) {
+		.nav-right-logos {
+		  margin: 1.2rem;
+		}
+		.nav-right-logos a {
+		  padding: 1rem 0.3rem;
+		}
+	  }
