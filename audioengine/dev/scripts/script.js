@@ -14,19 +14,21 @@ document.querySelectorAll(".nav-links-mobile").forEach(n => n.addEventListener("
 
 
 
-
-// Play button for pop out 
+// Variables for popout video and video 
 const playBtn = document.querySelector('.play-btn');
 const videoPopup = document.querySelector('.video-popup');
 const closeBtn = document.querySelector('.close-btn');
 const video = document.querySelector('video');
+const videoBorder = document.getElementById("audio-video");
 
+// Play button 
 playBtn.addEventListener('click', () => {
   videoPopup.style.display = 'block';
   video.controls = true; 
   playBtn.style.display = "none"; 
 });
 
+// Close button 
 closeBtn.addEventListener('click', () => {
   videoPopup.style.display = 'none';
   video.pause(); 
@@ -34,9 +36,14 @@ closeBtn.addEventListener('click', () => {
   playBtn.style.display = "block";
 });
 
+// Video popout 
 videoPopup.addEventListener('click', (event) => {
   if (event.target === videoPopup) {
     videoPopup.style.display = 'none';
   }
 });
 
+// Video Border when video is played 
+videoBorder.addEventListener('click', () => {
+  videoBorder.classList.add('video-border');
+});
