@@ -44,6 +44,13 @@
     left: 1rem;
     z-index: 1000;
 
+    a {
+        @include linkStyle;
+        background-color: #fff;
+        color: #666666;
+        width: 8em;
+    }
+    
     @include media($sm){
         background-color: #00000093;
         left: unset;
@@ -52,6 +59,11 @@
         margin: 0;
         padding: 2.4em 2em;
     }
+
+    @include media($lg){
+        top: 25%;
+        padding-right: 5rem;
+    }
     
     h2 {
         padding: .5rem 0;
@@ -59,30 +71,32 @@
         font-weight: 500;
 
         @include media($sm){
-            // margin: 0 0 .2rem 0;
             line-height: 2px;
         }
 
         @include media($lg){
             font-size: 2.5rem
         }
+
+        @include media($xlg){
+            font-size: 4rem;
+            line-height: 3rem;
+        }
     }
 
     p {
         font-family: $titleFont;
-        // line-height: 1.5rem;
         font-size: 1.25rem;
-
+        margin-bottom: .5rem;
+        
         @include media($lg){
-            font-size: 1.5rem;
+            font-size: 1.75rem;
         }
-    }
-    
-    a {
-        @include linkStyle;
-        background-color: #fff;
-        color: #666666;
-        width: 8em;
+
+        @include media($xlg){
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
     }
 }
 
