@@ -95,20 +95,20 @@ p, li {
 
 //slick arrows
 
-.slick-next {
-    background: url(../images/next-arrow.png);
-    color: $coral;
+.slick-next, .slick-prev{
+ color: $coral;
     z-index: 100;
     width: 50px;
     height: 81px;
 }
 
+.slick-next {
+    background: url(../images/next-arrow.png);
+   
+}
+
 .slick-prev {
     background: url(../images/prev-arrow.png);
-    color: $coral;
-    z-index: 100;
-    width: 50px;
-    height: 81px;
 }
 
 
@@ -127,22 +127,22 @@ p, li {
 
 
 // Slick 
-    .slick-next {
-        background: url(../images/next-arrow.png);
-        color: $coral;
-        z-index: 100;
-        width: 50px;
-        height: 81px;
-    }
+    // .slick-next {
+    //     background: url(../images/next-arrow.png);
+    //     color: $coral;
+    //     z-index: 100;
+    //     width: 50px;
+    //     height: 81px;
+    // }
 
 
-    .slick-prev {
-        background: url(../images/prev-arrow.png);
-        color: $coral;
-        z-index: 100;
-        width: 50px;
-        height: 81px;
-    }
+    // .slick-prev {
+    //     background: url(../images/prev-arrow.png);
+    //     color: $coral;
+    //     z-index: 100;
+    //     width: 50px;
+    //     height: 81px;
+    // }
 
 
     .right-side-icon { 
@@ -163,14 +163,10 @@ p, li {
     .back-to-top { 
         color: $back-top;
         font-family: $font;
-       
-    }
-
     // Media query for top button 
-    @media (min-width: 20rem) {
-      .back-to-top { 
+       @media (min-width: 20rem){
         margin-left: 2rem;
-      }
+       }
     }
 
     // Bottom Icons Media Queries 
@@ -242,9 +238,9 @@ p, li {
             float: right;
             width: 30%;
             span { 
-                position: absolute;
-                padding: 1rem;
-                white-space: nowrap;
+                // position: absolute;
+                // padding: 1rem;
+                // white-space: nowrap;
                 width: 30%;
             } 
         }
@@ -255,12 +251,12 @@ p, li {
             position: relative;
             float: right;
             width: 25%;
-            span { 
-                position: absolute;
-                padding: 1rem;
-                white-space: nowrap;
-                width: 30%;
-            } 
+            // span { 
+            //     position: absolute;
+            //     padding: 1rem;
+            //     white-space: nowrap;
+            //     width: 30%;
+            // } 
         }
     }
 
@@ -269,11 +265,11 @@ p, li {
             position: relative;
             float: right;
             width: 20%;
-            span { 
-                position: absolute;
-                padding: 1rem;
-                white-space: nowrap;
-                width: 30%;
-            } 
+            // span { 
+            //     position: absolute;
+            //     padding: 1rem;
+            //     white-space: nowrap;
+            //     width: 30%;
+            // } 
         }
     }

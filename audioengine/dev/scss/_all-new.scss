@@ -3,6 +3,7 @@
 
 .section-wrapper {
     line-height: 0;
+    padding: 2em 0 4em 0;
 }
 
 .all-new {
@@ -15,7 +16,7 @@
     }
 }
 
-.sticky-text-container {
+.sticky-text-span {
     background-color: #00000093;
     height: 100%;
     width: 100%;
@@ -26,11 +27,7 @@
     align-items: center;
 
     @include media($sm){
-        width: auto;
-        height: 50%;
-        left: unset;
-        top: 25%;
-        right: 0;
+        display: none;
     }
 }
 
@@ -45,20 +42,25 @@
     position: absolute;
     top: 2rem;
     left: 1rem;
-    // font-size: 100%;
+    z-index: 1000;
 
     @include media($sm){
-        margin: 2rem;
+        background-color: #00000093;
+        left: unset;
+        top: 12%;
+        right: 0;
+        margin: 0;
+        padding: 2.4em 2em;
     }
     
     h2 {
-        padding: 0;
-        // margin-top: 2rem;
+        padding: .5rem 0;
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 500;
 
         @include media($sm){
-            margin: 0 0 .5rem 0;
+            // margin: 0 0 .2rem 0;
+            line-height: 2px;
         }
 
         @include media($lg){
@@ -68,7 +70,7 @@
 
     p {
         font-family: $titleFont;
-        line-height: 1.5rem;
+        // line-height: 1.5rem;
         font-size: 1.25rem;
 
         @include media($lg){
