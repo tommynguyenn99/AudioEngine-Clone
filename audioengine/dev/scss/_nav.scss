@@ -185,10 +185,12 @@
 	// Media query for logos in navbar (Mobile)
 	@media (min-width: 67.18rem) { 
 		.nav-right-logos {
+
 			a {
+				filter: brightness(1000%);
+
 				&:hover {
-					background-color: $playShadow;
-					transition:0.5s ease-in-out;
+					filter: none;				
 				}
 			}
 		}

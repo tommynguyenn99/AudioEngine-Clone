@@ -1,7 +1,12 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-// h2
+// LINK DECORATION OFF
+a {
+    text-decoration: none;
+}
+
+// ALL h2
 .best-sellers, .shop-by, .news-ref {
     h2 {
         font-weight: 300;
@@ -24,13 +29,29 @@
 }
 
 // VIDEO HEADING OVERLAY
-
 .video-title {
     position: absolute;
-    top: 0;
-}
+    top: 12%;
 
-// BREAKPOINT TEXT
-// 454px
-// 538px
-// 708px
+        @media (min-width: 708px){
+            top: 10%;
+        }
+
+    h2 {
+        text-shadow: 2px 1px #fff;
+        font-weight: 600;
+        font-size: 2rem;
+
+        @media (min-width: 454px){
+                font-size: 2.3rem;
+            }
+
+        @media (min-width: 538px){
+            font-size: 2.9rem;
+        }
+
+        @media (min-width: 708px){
+            font-size: 3.8rem;
+        }
+    }
+}
