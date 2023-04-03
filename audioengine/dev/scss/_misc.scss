@@ -27,7 +27,32 @@
 
 .video-title {
     position: absolute;
-    top: 0;
+    top: 12%;
+
+        @media (min-width: 708px){
+            top: 10%;
+        }
+
+    h2 {
+        text-shadow: 2px 1px #fff;
+        font-weight: 600;
+        font-size: 2rem;
+
+        @media (min-width: 454px){
+                font-size: 2.3rem;
+            }
+
+        @media (min-width: 538px){
+            font-size: 2.9rem;
+        }
+
+        @media (min-width: 708px){
+            font-size: 3.8rem;
+        }
+
+    }
+
+    
 }
 
 // BREAKPOINT TEXT
