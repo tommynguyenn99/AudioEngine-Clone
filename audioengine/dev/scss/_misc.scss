@@ -1,0 +1,23 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.best-sellers, .shop-by, .news-ref {
+    h2 {
+        font-weight: 300;
+        font-size: 3em;
+    }
+}
+
+.best-sellers, .shop-by {
+    @include media($small){
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+.shop-by {
+    h2 {
+        margin-bottom: 1em;
+    }
+}
