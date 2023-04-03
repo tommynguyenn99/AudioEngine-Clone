@@ -133,7 +133,8 @@
 		}
 		.mobile-nav { 
 			font-family: $font;
-				top: 0;
+			top: 0;
+			display: none;
 		.nav-menu-mobile {
 			flex-direction: column;
 			background-color: $blackColor;
