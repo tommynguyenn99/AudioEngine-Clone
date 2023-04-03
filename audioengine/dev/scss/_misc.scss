@@ -1,7 +1,12 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-// h2
+// LINK DECORATION OFF
+a {
+    text-decoration: none;
+}
+
+// ALL h2
 .best-sellers, .shop-by, .news-ref {
     h2 {
         font-weight: 300;
