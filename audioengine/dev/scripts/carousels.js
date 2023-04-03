@@ -2,7 +2,6 @@
 
 
 //hero carousel
-
 $(document).ready(function(){
 
     $('.hero-slider').slick({
@@ -20,7 +19,9 @@ $(document).ready(function(){
 //shop by carousel
 $(document).ready(function(){
 
+    //carousel variables used in if logic
     $shopBy = $("#shop-by");
+    $news = $("#news");
 
     function updateSlick(event) {
         if (event.matches) { // We want Slick to run!
@@ -50,7 +51,8 @@ $(document).ready(function(){
               ]
           })
 
-          // slick carousel elements for in-the-news div
+
+          // slick carousel for in-the-news section
 
           $('.news-wrap').slick({
             dots: false,
@@ -85,7 +87,10 @@ $(document).ready(function(){
 
         } else if ((!event.matches) && $shopBy.hasClass("slick-initialized")) { // 'unslick'
             $('.shop-by-container').slick('unslick')
+        } else if ((!event.matches) && $news.hasClass("slick-initialized")) {
+            $('.news-wrap').slick('unslick')
         }
+
       }
       
       const mediaQuery = window.matchMedia("(min-width: 425px)")
