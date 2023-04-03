@@ -17,7 +17,7 @@
 //typography
 h1, h2, h3 {
     font-family: $titleFont;
-    padding-left: 1rem;
+    // padding-left: 1rem;
 }
 
 p, li {
@@ -88,16 +88,14 @@ p, li {
 
     slick-list {
         @extend .news-wrap;
-
     }
 }
-
 
 
 //slick arrows
 
 .slick-next, .slick-prev{
- color: $coral;
+    color: $coral;
     z-index: 100;
     width: 50px;
     height: 81px;
@@ -113,7 +111,6 @@ p, li {
 }
 
 
-
 .right-side-icon { 
     position: relative;
     width: auto;
@@ -125,20 +122,6 @@ p, li {
         }
     }
 }
-
-
-    .right-side-icon { 
-        position: relative;
-        width: auto;
-        span { 
-            width: 50%;
-            color: $blackColor;
-            &:hover { 
-                color: $playBtn;
-            }
-
-        }
-    }
 
 
     // Back to top 
@@ -219,10 +202,7 @@ p, li {
             position: relative;
             float: right;
             width: 30%;
-            span { 
-                // position: absolute;
-                // padding: 1rem;
-                // white-space: nowrap;
+            span {          
                 width: 30%;
             } 
         }
@@ -233,12 +213,6 @@ p, li {
             position: relative;
             float: right;
             width: 25%;
-            // span { 
-            //     position: absolute;
-            //     padding: 1rem;
-            //     white-space: nowrap;
-            //     width: 30%;
-            // } 
         }
     }
 
@@ -247,11 +221,5 @@ p, li {
             position: relative;
             float: right;
             width: 20%;
-            // span { 
-            //     position: absolute;
-            //     padding: 1rem;
-            //     white-space: nowrap;
-            //     width: 30%;
-            // } 
         }
     }

@@ -1,6 +1,7 @@
 @use "mixins" as *;
 @use "variables" as *;
 
+// h2
 .best-sellers, .shop-by, .news-ref {
     h2 {
         font-weight: 300;
@@ -18,6 +19,18 @@
 
 .shop-by {
     h2 {
-        margin-bottom: 1em;
+        margin: 1rem;
     }
 }
+
+// VIDEO HEADING OVERLAY
+
+.video-title {
+    position: absolute;
+    top: 0;
+}
+
+// BREAKPOINT TEXT
+// 454px
+// 538px
+// 708px
