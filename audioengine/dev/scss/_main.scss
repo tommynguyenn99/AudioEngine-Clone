@@ -17,7 +17,7 @@
 //typography
 h1, h2, h3 {
     font-family: $titleFont;
-    padding-left: 1rem;
+    // padding-left: 1rem;
 }
 
 p, li {
@@ -87,7 +87,6 @@ p, li {
 
     slick-list {
         @extend .news-wrap;
-
     }
 }
 

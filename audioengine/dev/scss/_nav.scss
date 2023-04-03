@@ -20,6 +20,10 @@
 		background-color: $blackColor; 
 	}
 
+	.audio-logo {
+		padding-left: 1rem;
+	}
+
 	.nav-logo {
 		font-size: 2rem;
 		min-width: 17rem;
@@ -138,7 +142,6 @@
 			display: block;
 		}
 		.nav-item-mobile {
-			// padding: 1rem 0rem;
 			margin: 0 1rem;
 			font-size: 1.5rem;
 			transition: height 0.5s ease-in-out;
@@ -158,7 +161,6 @@
 			transition: height 0.3s ease-in-out;
 			.nav-item-mobile {
 			&:hover { 
-				// transition: 0.5s ease-in-out;
 				background-color:  $hover-color;
 			}
 		}
