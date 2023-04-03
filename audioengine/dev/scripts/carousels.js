@@ -50,6 +50,8 @@ $(document).ready(function(){
               ]
           })
 
+          // slick carousel elements for in-the-news div
+
           $('.news-wrap').slick({
             dots: false,
             arrows: true,
@@ -92,7 +94,7 @@ $(document).ready(function(){
 })
 
 
-// slick carousel elements for in-the-news div
+
 
 
 
