@@ -20,14 +20,11 @@ $(document).ready(function(){
 //shop by carousel
 $(document).ready(function(){
 
-    function updateSlick(event) {
-        if (event.matches) { // We want Slick to run!
           $('.shop-by-container').slick ({
-                breakpoint: 425,
                 dots: false,
                 arrows: true,
                 infinite: false,
-                slidesToShow: 5,
+                slidesToShow: 3,
                 slidesToScroll: 2,
                 responsive: [
                     {
@@ -43,19 +40,13 @@ $(document).ready(function(){
                         slidesToShow: 3,
                         slidesToScroll: 3,
                     }
+                },
+                {
+                    breakpoint: 425,
+                    settings: "unslick",
                 }
               ]
           })
-        } else { // 'unslick'
-            $('.shop-by-container').slick('unslick')
-        }
-      }
-      
-      const mediaQuery = window.matchMedia("(min-width: 425px)")
-      updateSlick(mediaQuery) // Call listener function at run time
-      mediaQuery.addListener(updateSlick) // Attach listener function on state changes
-
-
 })
 
 
