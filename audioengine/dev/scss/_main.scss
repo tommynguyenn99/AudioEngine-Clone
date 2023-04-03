@@ -92,7 +92,6 @@ p, li {
 }
 
 
-
 //slick arrows
 
 .slick-next, .slick-prev{
@@ -110,7 +109,6 @@ p, li {
 .slick-prev {
     background: url(../images/prev-arrow.png);
 }
-
 
 
 .right-side-icon { 
@@ -204,10 +202,7 @@ p, li {
             position: relative;
             float: right;
             width: 30%;
-            span { 
-                // position: absolute;
-                // padding: 1rem;
-                // white-space: nowrap;
+            span {          
                 width: 30%;
             } 
         }
@@ -218,12 +213,6 @@ p, li {
             position: relative;
             float: right;
             width: 25%;
-            // span { 
-            //     position: absolute;
-            //     padding: 1rem;
-            //     white-space: nowrap;
-            //     width: 30%;
-            // } 
         }
     }
 
@@ -232,11 +221,5 @@ p, li {
             position: relative;
             float: right;
             width: 20%;
-            // span { 
-            //     position: absolute;
-            //     padding: 1rem;
-            //     white-space: nowrap;
-            //     width: 30%;
-            // } 
         }
     }
