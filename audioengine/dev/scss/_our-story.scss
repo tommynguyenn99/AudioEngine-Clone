@@ -26,7 +26,6 @@
     @include media(){
         background: none;
         margin: 0 auto;
-        // top: 3px;
     }
     // REGULAR VIEW
     h2 {
@@ -47,14 +46,12 @@
     p{
         font-family: $titleFont;
         line-height: 1.75rem;
-        // padding: 1rem 3rem;
         margin-bottom: 1.75rem;
         font-weight: 600;
         font-size: 1.2rem;
         width: 80%;
 
     @include media(){
-        // padding: 1rem 0 1.5rem;
         font-weight: 600;
         font-size: 1.75rem;
         line-height: 1.5em;
@@ -71,6 +68,3 @@
         @include linkStyle; 
     }
 }
-
-
-// styling in MAIN is attributed to ALL headers & paragraphs
