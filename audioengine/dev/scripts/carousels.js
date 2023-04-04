@@ -1,5 +1,4 @@
-//carousel slick script
-
+//slick carousel script
 
 //hero carousel
 $(document).ready(function(){
@@ -85,7 +84,8 @@ $(document).ready(function(){
             ]
         })
 
-        } else if ((!event.matches) && $shopBy.hasClass("slick-initialized")) { // 'unslick'
+            //if element has initialized class (meaning previously active already), and viewport size drops below 425px
+        } else if ((!event.matches) && $shopBy.hasClass("slick-initialized")) {
             $('.shop-by-container').slick('unslick')
         } else if ((!event.matches) && $news.hasClass("slick-initialized")) {
             $('.news-wrap').slick('unslick')
