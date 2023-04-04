@@ -28,11 +28,16 @@ $blackColor: #000000;
 // a href background colour
 $accentOrange: #fc851e;
 
-// // VIEWPORT SIZE 
+
+// --VIEWPORT SIZE--
 $small: 460px; //breakpoint BEST SELLERS
 $md: 750px; // breakpoint size used in OUR STORY
 $sm: 502px; // .sticky-text breakpoint in ALL NEW
 $lg: 818px; // text size breakpoint in ALL NEW
 $xlg: 1050px; // bigger text breakpoint in ALL NEW
-//854px text size change hero slider
-//1024px ^^
+
+
+// --HERO VIEWPORT SIZE--
+$heroSmall: 672px; // overlay appears
+$heroMd: 854px; // text size changes
+$heroLg: 1024px; // text size changes
