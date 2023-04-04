@@ -2,17 +2,20 @@
 const hamburger = document.querySelector (".hamburger"); 
 const navMenu = document.querySelector(".nav-menu-mobile"); 
 const $mobileNav = $(".mobile-nav");
+const $navLinks = $(".nav-links-mobile");
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active"); 
     $mobileNav.css("display", "block");
+    $navLinks.css("display", "block");
 })
 
 document.querySelectorAll(".nav-links-mobile").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
     $mobileNav.css("display", "none");
+    $navLinks.css("display", "none");
 }))
 
 

@@ -140,7 +140,7 @@
 			background-color: $blackColor;
 			width: 100%;
 			transition: height 0.3s ease-in-out;
-			display: block;
+			display: none;
 		}
 		.nav-item-mobile {
 			margin: 0 1rem;
@@ -167,6 +167,7 @@
 		}
 			.nav-links-mobile { 
 				text-align: left;
+				display: none;
 			}
 
 		.nav-right-logos-mobile { 
