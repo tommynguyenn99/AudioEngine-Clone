@@ -168,24 +168,12 @@
 			.nav-links-mobile { 
 				text-align: left;
 			}
-
-		.nav-right-logos-mobile { 
-
-				img  {
-					&:hover { 
-						background-color: $playShadow;
-						transition:0.3s ease-in-out;
-					}
-				}
-			}
 		}
 	}
-
 	}
 
-	// Media query for logos in navbar (Mobile)
-	@media (min-width: 67.18rem) { 
-		.nav-right-logos {
+
+		.nav-right-logos, .nav-right-logos-mobile {
 
 			a {
 				filter: brightness(1000%);
@@ -195,7 +183,7 @@
 				}
 			}
 		}
-	}
+
 
 	// Media query for logos in navbar (Desktop) 
 	@media (min-width: 67.18rem) {
