@@ -41,6 +41,7 @@ a {
         text-shadow: 2px 1px #fff;
         font-weight: 600;
         font-size: 2rem;
+        z-index: -1;
 
         @media (min-width: 454px){
                 font-size: 2.3rem;

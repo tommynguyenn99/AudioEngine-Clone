@@ -3,6 +3,7 @@ const hamburger = document.querySelector (".hamburger");
 const navMenu = document.querySelector(".nav-menu-mobile"); 
 const $mobileNav = $(".mobile-nav");
 const $navLinks = $(".nav-links-mobile");
+const $vidTitle = $(".video-title");
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
@@ -32,6 +33,7 @@ playBtn.addEventListener('click', () => {
   videoPopup.style.display = 'block';
   video.controls = true; 
   playBtn.style.display = "none"; 
+  $vidTitle.css("display", "none");
 });
 
 // Close button 
