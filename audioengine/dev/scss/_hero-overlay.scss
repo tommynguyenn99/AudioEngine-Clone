@@ -1,0 +1,62 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.inner-text-hero {
+    color: #666666;
+    background-color: #ffffffba;
+    right: 0;
+    top: 8%;
+    position: absolute;
+    display: none;
+
+    @include media($heroSmall){
+        display: block;
+    }
+
+    a {
+        @include linkStyle;
+        background-color: $accentOrange;
+        width: fit-content;
+        display: block;
+        padding: .5rem 1rem;
+    }
+}
+
+
+// ---TEXT & BOX STYLING---
+.inner-text-hero {
+    padding: 1.7rem;
+    width: 60%;
+
+    @include media($heroMd){
+        width: 48%;
+    }
+
+    h3 {
+        font-size: 1.95rem;
+
+        @include media($heroMd){
+            font-size: 2.5em;
+        }
+
+        @include media($heroLg){
+            font-size: 4em;
+            line-height: 1em;
+            margin-bottom: 1rem;
+        }
+    }
+
+    p {
+        line-height: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 300;
+        margin: 0 2rem 1.7rem 0;
+
+        @include media($heroLg){
+            line-height: 2.5rem;
+            font-size: 2.3rem;
+            
+        }
+    }
+    
+}
