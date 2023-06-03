@@ -19,11 +19,21 @@
         }
     }
 
+
+
+    .disclaimer-paragraph { 
+        color: $red;
+    }
     // Media Queries
 
     @media (min-width: 20rem) { 
         footer { 
             display: block;
+        }
+        .disclaimer-paragraph { 
+            width: 70%;
+            margin: 0 auto;
+            padding-top: 2rem;
         }
     }
 
@@ -53,6 +63,19 @@
                 div {
                     width: 25%;
                 }
+            }
+            .disclaimer-paragraph { 
+                width: 80%;
+                margin: 0 auto;
+
+            }
+        }
+    }
+
+    @media (min-width: 62.5rem) {
+        footer {
+            .disclaimer-paragraph { 
+                width: 70%;
             }
         }
     }
