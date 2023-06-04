@@ -63,10 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let acceptBtn = document.getElementById("acceptBtn");
   let declineBtn = document.getElementById("declineBtn");
 
+  // No scroll until accept button is selected
   document.body.style.overflow = "hidden";
 
   acceptBtn.addEventListener("click", function () {
     modal.style.display = "none";
+    // Allow scroll
     document.body.style.overflow = "auto";
   });
 

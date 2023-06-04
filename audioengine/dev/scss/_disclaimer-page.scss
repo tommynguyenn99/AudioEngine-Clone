@@ -24,9 +24,8 @@
     background-color: $dis-container-background;
     padding: 1.25rem;
     align-content: center;
-    width: 50rem;
     text-align: left;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   
   .disclaimer-btn-container { 
@@ -55,4 +54,37 @@
     }
   }
   
+}
+
+
+@media (min-width: 20rem) {
+    .modal-content {
+        width: 90%;
+        height: 90%;
+        overflow: auto;
+    }
+}
+
+@media (min-width: 37.5rem) {
+    .modal-content {
+        width: 90%;
+        height: 80%;
+ 
+    }
+}
+
+@media (min-width: 56.25rem) {
+    .modal-content {
+        width: 90%;
+        height: 80%;
+ 
+    }
+}
+
+@media (min-width: 75rem) {
+    .modal-content {
+        width: 70%;
+        height: 80%;
+ 
+    }
 }
